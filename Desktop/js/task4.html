@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+        div{
+            display: flex;
+        }
+        #pr{
+            text-decoration: line-through;
+        }
+        #div button{
+            height: 20px;
+            margin: 10px;
+            
+        }
+        h3{
+            position: relative;
+            bottom: 10px;
+        }
+        i{
+            margin: 20px;
+            font-size: 40px;
+            color: red;
+        }
+        h5{
+            position: relative;
+            bottom: 100px;
+            left: 60px;
+            font-size: 20px;
+            color: black;
+            
+        }
+    </style>
+</head>
+<body>
+    <img src="/s3.jpg" alt=""height="250px" width="200px">
+    <div>
+        <h2>Price-</h2>
+        <h2 id="pr">1000</h2>
+        
+
+    </div>
+    <h2>Offer price - 500</h2>
+    <div id="div">
+        <button onclick="fun()">+</button>
+        <h3>0</h3>
+        <button onclick="fun1()">-</button> 
+
+    </div> 
+    
+    <button onclick="fun2()">Buy Now</button> <br>
+    <i class="fa-solid fa-cart-shopping"></i>
+    <h5>0</h5>
+</body>
+<script>
+    let v=0
+        function fun(){    
+        let a=document.querySelector('h3')
+        a.innerHTML= v++
+    }
+    function fun1(){    
+        let b=document.querySelector('h3')
+        b.innerHTML= v--
+    }
+    function fun2(){    
+        let c=document.querySelector('h5')
+        c.innerHTML= v++
+    }
+    
+    
+</script>
+</html>
