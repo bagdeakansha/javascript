@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Signup page----</h2>
+    <form action="login.html" onsubmit="return form()"id="sign">
+        <label for="">Name</label>
+        <input type="text" id="name"> <br> <br>
+
+        <label for="">email</label>
+        <input type="text" id="mail"> <br> <br>
+
+        <label for="">password</label>
+        <input type="password" id="pass"> <br><br>
+
+        <label for="">confirm password</label>
+        <input type="password" id="cpass"> <br><br>
+
+        <input type="submit"id="sign">
+    </form>
+
+
+
+    <script>
+        function form(){
+            let na=document.getElementById("name").value;
+            let em=document.getElementById("mail").value;
+            let ps=document.getElementById("pass").value;
+            let cps=document.getElementById("cpass").value;
+
+            if(na==""){
+                alert("enter your name")
+                document.getElementById("name").focus()
+                return false
+
+            }
+
+            else if(em==""){
+                alert("enter your mail")
+                document.getElementById("mail").focus()
+                return false
+
+            }
+            else if(!(em.includes("@"))){
+                alert("add @ in your mail")
+                document.getElementById("mail").focus()
+                return false
+
+            }
+            else if(pass==""){
+                alert("enter your password")
+                document.getElementById("pass").focus()
+                return false
+
+            }
+            else if(cpass==""){
+                alert("confirm password")
+                document.getElementById("cpass").focus()
+                return false
+
+            }
+
+            
+
+            
+
+        }
+
+    </script>
+</body>
+</html>

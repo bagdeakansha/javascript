@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="task.js"></script>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(221, 211, 199);
+        }
+        
+        .main{
+            display: flex;
+            gap: 20px;
+            /* border: 1px solid black; */
+        }
+        #m1{
+            margin-top: 50px;
+        
+        }
+        #m1 ul li{
+            padding: 5px;
+            
+            
+        }
+        #m1 ul li:hover{
+            
+            border: 1px solid rgb(11, 89, 131);
+        }
+        #m1 ul li img{
+            border-radius: 10px;
+        }
+        #m2{
+            margin: 20px;
+           
+        }
+        .content{
+            margin-top: 100px;
+        }
+        .content h2{
+            position: relative;
+            top: 30px;
+            font-size: 30px;
+            font-style: italic;
+            /* color: purple; */
+        }
+        .content button{
+            padding: 7px;
+            background-color: rgb(197, 45, 45);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            position: relative;
+            top: 40px;
+        }
+        .content h4{
+            font-size: 30px;
+            position: relative;
+            top: 20px;
+        }
+    </style>
+    <div class="main">
+        <div id="m1">
+            <ul type="none">
+                <li><img src="/s1.jpg" alt=""height="70px" onmouseenter="fun1()"></li>
+                <li><img src="/s2.jpg" alt=""height="70px" onmouseenter="fun2()"></li>
+                <li><img src="/s3.jpg" alt=""height="70px" onmouseenter="fun3()"></li>
+                <li><img src="/s4.jpg" alt=""height="70px" onmouseenter="fun4()"></li>
+                <li><img src="/s5.jpg" alt=""height="70px" onmouseenter="fun5()"></li>
+                <li><img src="/s6.jpg" alt=""height="70px" onmouseenter="fun6()"></li>
+            </ul>
+        </div>
+
+        <div id="m2">
+            <img src="/s1.jpg" alt=""height="650px" id="img">
+        </div>
+
+        <div class="content">
+            <h2>AKHILAM Women's Georgette Banarasi Silk <br>Saree with Unstitched Blouse Piece</h2>
+            <button>Limited time deal</button>
+            <h4>₹1,799</h4>
+            <p>Inclusive of all taxes <br>
+                EMI starts at ₹88. No Cost EMI availabl</p>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+chrome---v8 engine
+microsoft edge--chakra
+console-object
+log()-function
+
+
+. - access member operator
+console is only for developer
+console.log(" ")
+document.write(" ")
+alert(" ")
+we can declare variable by three types--
+var,let,const
+var a=2;
+let b=3.5;
+const n="akansha";
+var---
+we can re-declare and re-assign the value with var
+ex-var a=2;
+var a=5;
+let---
+we cannot re-dclare but can re-assign the value in let
+ex- let b="akku";
+        b="akansha";
+const---
+we cannot re-declare and re-assign the value in const
+ex- const z="Cybrom";
+operators are special sysmbols---
+operators are of three types--
+unary / binary / ternary
+unary--- ++/--(its worked for single operand
+binary--      (its worked for two or more operand
+/-it is used for quotient
+%- it is used for remainder
+arithmetic-(+,-,*,/,%)
+Relational-(>,<,>=,<=,!=,==,===)
+===(value+type compare)
+Assignment operator----
++=,-=,*=,/=,%=
+logical operator---
+&&,||(pipe),!
+Ternary operator is worked for conditional operator--
+? :
+conditional statement------
+if else family-
+1, if then else
+2, ladder if else
+3, nested if else
+
+switch--
+loops--
+-> do while
+-> while
+-> for 
+-> for in
+-> for of
+-> for each
+
+syntax of if then else--
+if(condition){
+//statement
+}
+else{
+//statement
+}
+-------------------
+syntax of if else ladder--
+if(condition){
+//statement
+}
+else if(condition){
+//statement
+}
+else{
+//statement
+}
+----------------------
+function is a block of code/set of instruction which is used for code reusability.
+syntax of function--
+function  identity(parameter)
+{
+//statements
+}
+identity(arg)
+-----------------------
+1. function declaration
+2. function defination
+3. function calling
+----------------------------
+types of user defined function--
+1. without parameter and no return value
+2. with parameter and no return value
+3. with parameter and with return value
+4. without parameter and with return value
+
+parameter/argument works as an input in function
+------------------------------------
+DOM-Document object module.
+For manipulating content of html and css through js is known as DOM.
+document.write() is a part of js.
+Node--html tag
+innerhtml- we can change tag as well as content in innerhtml
+getElementById is a function and it return single node or element
+document.getElementsByClassName return list node in array format
+
+
+
+
+
+
+

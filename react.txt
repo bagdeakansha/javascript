@@ -1,0 +1,15 @@
+react installation in your computer-----
+
+step 1----(Install node js and npm)
+ check version of node js-----> node -v
+ chexk version of npm -----> npm -v
+
+step 2---
+npm install -g create-react-app
+
+step 3---
+check version of create-react-app
+   create-react-app --version
+
+step 4---
+npx create-react-app <appname>

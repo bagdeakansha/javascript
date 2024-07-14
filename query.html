@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Query Selector...</h1>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam id iure eos magnam necessitatibus veritatis iusto, quasi harum dicta, tenetur eligendi nesciunt, laboriosam obcaecati. Rerum numquam quas molestiae beatae id.</p>
+    <h2 id="head">Hello..!!</h2>
+    <ul>
+        <li>Python</li>
+        <li>Django</li>
+        <li>React</li>
+        <li>Java</li>
+    </ul>
+    <button class="btn">click here</button>
+    
+</body>
+<script>
+    let a=document.querySelector('h1')
+    a.style.backgroundColor="pink"
+    a.style.fontWeight=600
+    a.style.textShadow='2px 4px 4px yellow'
+    // a.style.color="blue"
+
+    let b=document.querySelector('.para')
+    b.style.color="blue"
+
+    let c=document.querySelector('#head')
+    c.style.fontStyle="italic"
+    c.style.color="red"
+
+    let d=document.querySelectorAll('li')
+    d[0].style.color="navy"
+    d[0].style.fontSize="20px"
+    d[1].style.color="green"
+    d[1].style.fontSize="20px"
+    d[1].style.fontStyle="bold"
+    d[2].style.color="red"
+    d[2].style.fontSize="20px"
+    d[3].style.color="brown"
+    d[3].style.fontSize="20px"
+
+    let btn=document.querySelector('.btn')
+    btn.addEventListener('mouseenter',function(){
+        alert("working...")
+    })
+
+
+</script>
+</html>

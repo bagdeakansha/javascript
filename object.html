@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //object-- it is used to store value in key value format and access value through key
+    //object is a datatype---
+    let employee={
+            empname:"Akansha",
+            empid:102,
+            emp_city:"Bhopal",
+            emp_detail:{
+                salary:1000,
+                bank_name:"RBI"
+            },
+            emp_fun:function(){
+                console.log("object function")
+            },
+            emp_arr:[10,"Akansha",2001]
+        }
+        console.log(employee.emp_fun())
+        console.log(employee.emp_arr[1])
+        
+
+        //---------------------------------------
+        // console.log(employee.emp_detail.salary)
+        // for(let k in employee){
+        //     console.log(k + " " +employee[k]);
+        // }
+        //--------------------------
+        // let k=Object.keys(employee)
+        // console.log(k)
+
+        // let v=Object.values(employee)
+        // console.log(v)
+        //-----------------
+</script>
+</html>

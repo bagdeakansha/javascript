@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- json--javascript object notation -->
+     <!-- get,insert/post,update/put,delete -->
+     <!-- fetch(url,method)
+      syntax----
+     fetch("url",{
+        method:"POST"
+     }) -->
+        <!-- a.json()-it is used for convert data in object -->
+         <!-- fetch return promise
+           To handle fetch() we use async,await -->
+
+         
+
+
+
+</body>
+<script>
+    // async function demo(){
+    //     let a=await fetch("https://jsonplaceholder.typicode.com/posts")
+    //     let r=await a.json()
+    //    let res= r.map((i)=>{return i.id})
+    //     console.log(res)
+    // }
+    // demo()
+
+    async function fun(){
+        let r=await fetch("")
+        let c=await r.json()
+        let sh=document.getElementById('showdata')
+        let d=c.map((e)=>`
+       
+        <tr>
+            
+
+        `
+
+        )
+    }
+</script>
+</html>

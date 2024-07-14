@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* #img1{
+        display:none;
+    } */
+    #head{
+        display:none;
+    }
+</style>
+<body>
+    <img src="/img1.jpg" alt="" id="img1">
+    <h1 id="head">Akansha</h1>
+    <!-- <img src="/img2.jpg" alt="" id="img2">
+    <h1 id="head1">Rose</h1> -->
+    
+</body>
+<script>
+    let a=document.querySelector('#img1')
+    a.addEventListener('mouseenter',function(){
+    let b=document.querySelector('#head')
+    b.style.display="block"
+
+
+    })
+    let im=document.querySelector('#img1')
+    im.addEventListener('mouseleave',function(){
+    let bodyy=document.querySelector('#head')
+    bodyy.style.display="none"
+
+
+    })
+    // let c=document.querySelector('#img1')
+    // c.addEventListener('mouseenter',function(){
+    // let d=document.querySelector('#head1')
+    // d.style.display="block"
+    
+
+    // })
+    // let im1=document.querySelector('#img1')
+    // im1.addEventListener('mouseleave',function(){
+    // let bodyy1=document.querySelector('#head')
+    // bodyy1.style.display="none"
+
+
+    // })
+    
+
+</script>
+</html>

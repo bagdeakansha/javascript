@@ -1,0 +1,1142 @@
+// const age=22;
+// const name="akansha";
+// const sub=<ul>
+//     <li>Html</li>
+//     <li>CSS</li>
+//     <li>JS</li>
+//     <li>Python</li>
+//     <li>Django</li>
+
+// </ul>
+
+
+const App=()=>{
+    return(
+        // <h1>Hello i am {name} I am {age} year old</h1>
+        // <h1>My subjects are: {sub}</h1>
+        <>
+        {/* <h1>Hello my name is akansha...!!!</h1>
+        <h2>I am a software developer....</h2> */}
+        <h1>Application form---</h1>
+        Enter name : <input type="text"/>
+        <br /> <br />
+
+        Enter City : <input type="text"/>
+
+
+        </>
+    )
+}
+export default App;
+-------------------------------------------
+components----
+
+
+import Cybrom from "./Cybrom";
+
+const App=()=>{
+    return(
+        <>
+        <h1>Welcome to Cybrom...!!!</h1>
+        <Cybrom/>
+        </>
+    )
+}
+export default App;
+--------------------------------------
+import Header from "./Header"
+import Data from "./Data"
+import Footer from "./footer"
+const App=()=>{
+    return(
+        <>
+        <Header/>
+        <Data/>
+        <Footer/>
+        
+        </>
+    )
+}
+export default App;
+----------------------------------------------
+import Topd from "./topd";
+import Middle from "./middle";
+const Data=()=>{
+    return(
+        <>
+        <h1>This is my Data....</h1>
+        <hr />
+        <Topd/>
+        <Middle/>
+        </>
+    )
+}
+export default Data;
+--------------------------------------
+import Copyright from "./copy";
+const Footer=()=>{
+    return(
+        <>
+        <h1>This is my footer....</h1>
+        <hr />
+        <Copyright/>
+        </>
+    )
+}
+export default Footer;
+----------------------------------------
+import Employee from "./employee";
+const App=()=>{
+    return(
+        <>
+        
+        <Employee nm="Akansha"sal="25000"
+        num="E123"/>
+
+        </>
+    )
+}
+export default App;
+------------------------------------------
+const Employee=(props)=>{
+    return(
+        <>
+        <h1>Employee name:{props.nm}</h1>
+        <h1>Employee salary:{props.sal}</h1>
+        <h1>Employee number:{props.num}</h1>
+        </>
+    )
+}
+export default Employee;
+-----------------------------------------------
+import Cybrom from "./Cybrom1";
+const Student{
+    "name":"Akansha",
+    "city":"Bhopal",
+    "roll_no":123
+}
+
+const App=()=>{
+    return(
+        <>
+        <Cybrom nm={Student.name} ct={Student.city} roll_no={Student.rollno} />
+        
+        </>
+    )
+}
+export default App;
+------------------------------------------------
+map---
+const App=()=>{
+    const name=["Akansha","Aastha","Shristy"];
+    const ans=name.map((key)=>{
+        return(
+            <>
+            <h1>{key}</h1>
+            </>
+        )
+    })
+    return(
+        <>
+        <h1>Welcome to cybrom Bhopal</h1>
+        {ans}
+        </>
+    )
+}
+export default App;
+---------------------------------------------------const App=()=>{
+    const city=["Bhopal","Indore","Gwalior","Ujjain","Jabalpur"];
+    const my_city=city.map((key)=>{
+        return(
+            <>
+            <option>{key}</option>
+            </>
+        )
+    })
+    return(
+        <>
+        <h1>Welcome to cybrom Bhopal</h1>
+        <select>
+            {my_city}
+        </select>
+        </>
+    )
+}
+export default App;
+------------------------------------------------------------
+const Student=[
+    {
+        "rollno":101,
+        "Name":"Akansha",
+        "city":"Bhopal",
+    },
+    {
+        "rollno":102,
+        "Name":"Aastha",
+        "city":"Bhopal",
+    },
+    {
+        "rollno":103,
+        "Name":"Shristy",
+        "city":"Bhopal",
+    },
+    {
+        "rollno":104,
+        "Name":"Deepa",
+        "city":"Bhopal",
+    }
+]
+const ans=Student.map((key)=>{
+    return(
+        <>
+        <tr>
+            <td>{key.rollno}</td>
+            <td>{key.Name}</td>
+            <td>{key.city}</td>
+        </tr>
+        </>
+    )
+})
+const App=()=>{
+    return(
+        <>
+        <h1>Welcome to cybrom..!!</h1>
+        <table border="1" width="500" bgcolor="pink">
+            <tr bgcolor="white">
+                <th>Rollno</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+            {ans}
+        </table>
+        </>
+    )
+}
+export default App;
+--------------------------------------------------------
+import Employee from "./employee"
+const ans=Employee.map((key)=>{
+    return(
+        <>
+        <tr>
+            <td>{key.Empno}</td>
+            <td>{key.Name}</td>
+            <td>{key.City}</td>
+            <td>{key.Salary}</td>
+        </tr>
+        </>
+    )
+})
+const App=()=>{
+    return(
+        <>
+        <h1>Employee Data...</h1>
+        <table border="1">
+            <tr>
+                <th>Emp No</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Salary</th>
+            </tr>
+            {ans}
+        </table>
+        
+        
+        </>
+    )
+}
+export default App;
+----------------------------------------------
+1--App.jsx
+import Students from "./student"
+import Cybrom from "./Cybrom2"
+
+const ans=Students.map((key)=> <Cybrom rno={key.rollno} nm={key.name} ct={key.City} fs={key.fees}/>)
+
+const App=()=>{
+    return(
+        <>
+        <h1>student list</h1>
+        <table border="1">
+            <tr>
+                <th>Rollno</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Fees</th>
+            </tr>
+            {ans}
+        </table>
+        </>
+    )
+}
+export default App;
+-----------------------------------------------
+students.jsx
+const Students=[
+    {
+        "rollno":121,
+        "name":"Akku",
+        "City":"Bhopal",
+        "fees":12500,
+        
+    },
+    {
+        "rollno":122,
+        "name":"Srishty",
+        "City":"Bhopal",
+        "fees":15500,
+        
+    },
+    {
+        "rollno":121,
+        "name":"Aastha",
+        "City":"Bhopal",
+        "fees":17800,
+        
+    },
+    {
+        "rollno":121,
+        "name":"Divya",
+        "City":"Bhopal",
+        "fees":1500,
+        
+    },
+]
+export default Students;
+---------------------------------------------
+cybrom2.jsx
+3--const Cybrom=(props)=>{
+    return(
+        <>
+        <tr>
+            <td>{props.rno}</td>
+            <td>{props.nm}</td>
+            <td>{props.ct}</td>
+            <td>{props.fs}</td>
+        </tr>
+        </>
+    )
+}
+export default Cybrom;
+---------------------------------------------------
+css----
+import Cybrom from "./Cybrom";
+import College from "./College";
+
+const App=()=>{
+
+    return(
+        <>
+        <h1>Welcome to cybrom....</h1>
+        <h2>We are cybrom students...</h2>
+        <div id="box1">
+            <div id="box2">
+                <div id="box3">
+                    <div id="box4">CYBROM</div>
+                </div>
+            </div>
+        </div>
+        <Cybrom/>
+        <College/>
+        </>
+    )
+}
+export default App;
+-----------------------------------------------------
+const Product=()=>{
+    return(
+        <>
+        <h2>Product Details...</h2>
+        <div className="div1">
+            <div id="d1">
+                <h1>LAPTOP</h1>
+            </div>
+            <div id="d2">
+                <h1>MOBILE</h1></div>
+            <div id="d3">
+                <h1>EARPHONE</h1>
+            </div>
+        </div>
+        
+        </>
+    )
+}
+export default Product;
+--------------------------------------------
+import Product from "./product";
+const App=()=>{
+    return(
+        <>
+        <h2>WELCOME TO OUR PAGE...!!</h2>
+        <select>
+            <option value="select">Select</option>
+            <option value="laptop">laptop</option>
+            <option value="mobile">mobile</option>
+            <option value="earphone">Earphone</option>
+        </select>
+        <Product/>
+        </>
+        
+    )
+}
+export default App;
+----------------------------------------
+button---
+import Button from 'react-bootstrap/Button';
+const App=()=>{
+    return(
+        <>
+        <h1>Welcome to Cybrom Learn React Bootstrap....</h1>
+        <Button variant="primary">Primary</Button>{' '}
+      <Button variant="secondary">Secondary</Button>{' '}
+      <Button variant="success">Success</Button>{' '}
+      <Button variant="warning">Warning</Button>{' '}
+      <Button variant="danger">Danger</Button>{' '}
+
+        </>
+    )
+}
+-------------------------------------
+bootstrap------
+import Alert from 'react-bootstrap/Alert';
+import {Container} from 'react-bootstrap'
+const App=()=>{
+    return(
+        <>
+        <Container>
+        <Alert key={variant} variant={variant}>
+          This is a {variant} alert—check it out!
+        </Alert>
+        <Alert varient='primary' dismissible>
+            This is my alert box
+        </Alert>
+
+        </Container>
+
+        
+
+        </>
+    )
+}
+--------------------------------------
+badges-----
+import Badge from 'react-bootstrap/Badge';
+const App=()=>{
+    return(
+        <>
+        <div>
+      <h1>
+        Example heading <Badge bg="secondary">New</Badge>
+      </h1>
+      <h2>
+        Example heading <Badge bg="secondary">New</Badge>
+      </h2>
+      <h3>
+        Example heading <Badge bg="secondary">New</Badge>
+      </h3>
+      <h4>
+        Example heading <Badge bg="secondary">New</Badge>
+      </h4>
+      <h5>
+        Example heading <Badge bg="secondary">New</Badge>
+      </h5>
+      <h6>
+        Example heading <Badge bg="secondary">New</Badge>
+      </h6>
+    </div>
+        </>
+    )
+}
+export default App;
+------------------------------------
+button group--
+import Button from 'react-bootstrap/Button';
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
+const App=()=>{
+    return(
+        <>
+        <ButtonGroup aria-label="Basic example">
+      <Button variant="secondary">Left</Button>
+      <Button variant="secondary">Middle</Button>
+      <Button variant="secondary">Right</Button>
+    </ButtonGroup>
+        </>
+    )
+}
+export default App;
+-----------------------------------------
+dropdown---
+import Dropdown from 'react-bootstrap/Dropdown';
+const App=()=>{
+    return(
+        <>
+        <Dropdown>
+      <Dropdown.Toggle variant="danger" id="dropdown-basic">
+        Dropdown Button
+      </Dropdown.Toggle>
+
+      <Dropdown.Menu>
+        <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+        </>
+
+    )
+}
+export default App;
+-------------------------
+Navbar-----
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+const App=()=>{
+    return(
+        <>
+        <Navbar bg="dark" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+      <br />
+      <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+
+      <br />
+      <Navbar bg="light" data-bs-theme="light">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#features">Features</Nav.Link>
+            <Nav.Link href="#pricing">Pricing</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+        
+        </>
+
+    )
+}
+export default App;
+--------------------------
+import { Container,Row,Col} from "react-bootstrap"
+const App=()=>{
+  return(
+    <>
+    <Container className="border text-center my-5 p-5 bg-dark">
+      <Row>
+        <Col md={6} className="border bg-primary p-2 text-white fs-2">Akansha...
+        </Col>
+        <Col md={4}className="border bg-danger p-2 text-white fs-2">Nibbi
+        </Col>
+        <Col md={2}className="border bg-success p-2 text-white fs-2">Twinkle
+        </Col>
+      </Row>
+
+      <Row className="my-4">
+        <Col md={2} className="border bg-warning p-2 text-white fs-2">Akansha...
+        </Col>
+        <Col md={2}className="border bg-success p-2 text-white fs-2">Nibbi
+        </Col>
+        <Col md={8}className="border bg-danger p-2 text-white fs-2">Twinkle
+        </Col>
+
+      </Row>
+    </Container>
+
+    
+
+    
+    </>
+  )
+
+}
+export default App;
+---------------------------------------------
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Carousel from 'react-bootstrap/Carousel';
+import Card from 'react-bootstrap/Card';
+import { Row,Col } from 'react-bootstrap';
+
+
+const App=()=>{
+  return(
+    <>
+    <Container>
+    <Navbar expand="lg" className="bg-body-teritory">
+      <Container fluid>
+        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
+          >
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="#action2">Link</Nav.Link>
+            <NavDropdown title="Link" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+              <NavDropdown.Item href="#action4">
+                Another action
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action5">
+                Something else here
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link href="#" disabled>
+              Link
+            </Nav.Link>
+          </Nav>
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+
+    </Container>
+    <br />
+
+
+    {/* <Container> */}
+    <Carousel>
+      <Carousel.Item>
+        <img src="public/b1.webp" width="100%"/>
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src="public/b2.webp"/>
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src="public/b3.webp"/>
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+    {/* </Container> */}
+    <br /> <br />
+
+    <Container>
+      <Row>
+        
+        <Col>
+        <Card style={{ width: '12rem',height:'5rem'}}>
+      <img src="public/f1.webp"/>
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Shop Now</Button>
+      </Card.Body>
+    </Card>
+        </Col>
+
+        <Col>
+        <Card style={{ width: '12rem',height:'5rem'}}>
+      <img src="public/f2.webp"/>
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Shop Now</Button>
+      </Card.Body>
+    </Card>
+        </Col>
+
+        <Col>
+        <Card style={{ width: '12rem',height:'5rem'}}>
+      <img src="public/f3.webp"/>
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Shop Now</Button>
+      </Card.Body>
+    </Card>
+        </Col>
+
+        <Col>
+        <Card style={{ width: '12rem',height:'5rem'}}>
+      <img src="public/f4.webp"/>
+      <Card.Body>
+        <Card.Title>Card Title</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+        <Button variant="primary">Shop Now</Button>
+      </Card.Body>
+    </Card>
+        </Col>
+        
+      </Row>
+      
+    </Container>
+    <br /> 
+    <Carousel.Item>
+      <img src="public/b3.webp"/>
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+
+
+    
+    
+    
+    </>
+
+  )
+}
+export default App;
+-----------------------------------------------------
+import {BrowserRouter,Routes,Route} from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Nopage from "./pages/Nopage";
+import Service from "./Services";
+import Companyservice from "./CompanyService";
+import Productservice from "./pages/ProductService";
+import Sellservice from "./pages/Sellservice";
+
+
+const App=()=>{
+  return(
+    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Layout/>} />
+      <Route index element={<Home/>} />
+      <Route path="/home" element={<Home/>} />
+      <Route path="/about" element={<About/>} />
+      <Route path="/contact" element={<Contact/>} />
+      <Route path="/service" element={<Service/>} >
+         <Route path="companyservice" element={<Companyservice/>}/>
+         <Route path="productservice" element={<Productservice/>}/>
+         <Route path="sellservice" element={<Sellservice/>}/>
+        </Route>
+      <Route path="*" element={<Nopage/>} />
+      
+    </Routes>
+    </BrowserRouter>
+    </>
+  )
+}
+export default App;
+---------------------------------------------------------
+import {Link,Outlet} from "react-router-dom";
+const Layout=()=>{
+    return(
+        <>
+        <Link to="home">Home</Link>
+        <Link to="about">About</Link>
+        <Link to="contact">Contact Us</Link>
+        <Link to="service">Services</Link>
+
+        <hr size="3" color="red"/>
+          <Outlet/>
+        <hr size="3" color="red"/>
+
+        www.cybrom.com
+          
+
+        </>
+    )
+}
+export default Layout;
+-----------------------------------------------
+import {Link,Outlet} from 'react-router-dom'
+const Service=()=>{
+    return(
+        <>
+        <h1>Our company services</h1>
+        <table width="100%">
+            <tr>
+                <td>
+                    <Link to="companyservice">Company Services</Link>
+                    <br /> <br />
+                    <Link to="productservice">Product Services</Link>
+                    <br /> <br />
+                    <Link to="sellservice">Sell Services</Link>
+                    <br /> <br />
+                </td>
+                <td>
+                    <Outlet/>
+                </td>
+            </tr>
+        </table>
+        </>
+    )
+}
+export default Service;
+-----------------------------------------------------
+events-----
+const App=()=>{
+  const display=()=>{
+    alert("This is alert box")
+
+  }
+  return(
+    <>
+    <h1>welcome to react events...</h1>
+    <button onClick={display}>click here</button>
+
+
+    </>
+
+  )
+----------------------------------------------------
+const App=()=>{
+  const myName=(fm,sm)=>{
+    alert("My name is" + fm + sm + "from Bhopal")
+  }
+  return(
+    <>
+    <h1>WElcome to my page</h1>
+    <button onClick={()=>{myName (Akansha ,Bagde) }}>click here</button>
+    </>
+  )
+}
+export default App;
+}
+
+-------------------------------------------------
+const App=()=>{
+  const display=(nm,b)=>{
+    alert(nm+ "Event Type: "+ b.type);
+  }
+
+return(
+  <>
+    <h1>Welcome to React Events</h1>
+    <button onClick={(e)=>{display("Akansha",e)}}>click here</button>
+  </>
+)
+  
+
+}
+export default App;
+-----------------------------------------------
+const App=()=>{
+  const display=(e)=>{
+    alert("Event type :" + e.type)
+  }
+  return(
+    <>
+    <h1>welcome...</h1>
+    <button onClick={display}>click here</button>
+    </>
+
+  )
+}
+export default App
+------------------------------------------
+const App=()=>{
+  const myVal=(e)=>{
+    let nm=e.target.name;
+    let val=e.target.value;
+    let typ=e.target.type;
+    alert("name :"+ nm + "Value :"+ val+ "Type :" +typ+ "Event :" +e.type);
+  }
+  return(
+    <>
+    <h1>Welcome to React Componenets...</h1>
+    <button type="button" name="btn1" value="myBtn" onClick={myVal}>Click here</button>
+    </>
+  )
+}
+export default App;
+---------------------------------------------
+import { useState } from "react";
+
+const App=()=>{
+  const {color,setColor}=useState("red")
+  const myColor=()=>{
+    setColor("green");
+  };
+  return(
+    <>
+    <h1>My fav color : {color}</h1>
+
+    <button onClick={myColor}>click here</button>
+
+    </>
+
+
+
+  )
+
+}
+export default App;
+-----------------------------------------------
+import { useState } from "react";
+const App=()=>{
+  const[color,setColor]=useState("red");
+  
+  return(
+    <>
+    <h1 style={{color:color}}>My fav color :{color}</h1>
+    <button onClick={()=>{setColor("green")}}>Green color</button>
+    <button onClick={()=>{setColor("blue")}}>Blue color</button>
+    <button onClick={()=>{setColor("orange")}}>Orange color</button>
+    <button onClick={()=>{setColor("pink")}}>Pink color</button>
+    <button onClick={()=>{setColor("yellow")}}>Yellow color</button>
+    </>
+  )
+}
+export default App;
+-----------------------------------------------------
+form-----------
+import { useState } from "react"
+const App=()=>{
+  const [name,setName]=useState("");
+  const [city,setCity]=useState("");
+  const [salary,setSalary]=useState("");
+  const [age,setAge]=useState("");
+  const submitHandle=()=>{
+    let inputVal={name:name,city:city,salary:salary,age:age}
+    console.log(inputVal)
+  }
+  return(
+    <>
+    <h1>Application form...</h1>
+    Enter Name:<input type="text" value={name} onChange={(e)=>{setName(e.target.value)}}/>
+    <br />
+    Enter City:<input type="text" value={city} onChange={(e)=>{setCity(e.target.value)}}/>
+    <br />
+    Enter Salary:<input type="text" value={salary} onChange={(e)=>{setSalary(e.target.value)}}/>
+    <br />
+    Enter Age:<input type="text" value={age} onChange={(e)=>{setAge(e.target.value)}}/>
+    <br />
+    <button onClick={submitHandle}>Data Save</button>
+    </>
+  )
+}
+export default App;
+-----------------------------------------------
+const { useEffect } = require("react");
+const { useState } = require("react")
+
+const App=()=>{
+  const [cnt,setCnt]=useState(0);
+  useEffect(()=>{
+    setTimeout(()=>{
+      setCnt(cnt+1);
+    }, 5000);
+  });
+  return(
+    <>
+    <h1>Application form : {cnt}</h1>
+    </>
+  )
+}
+export default App;
+--------------------------------------------
+import { useEffect,useState } from "react";
+
+const App=()=>{
+  const [cnt,setCnt]=useState(0);
+  useEffect(()=>{
+    //setTimeout(()=>{
+      setCnt(cnt+1);
+    //}, 1000);
+  },[]);
+  return(
+    <>
+    <h1>Application form : {cnt}</h1>
+    </>
+  )
+}
+export default App;
+------------------------------------------------------
+import { useEffect,useState } from "react";
+
+const App=()=>{
+  const [cnt,setCnt]=useState(0);
+  const [multi,setMulti]=useState(1);
+  useEffect(()=>{
+    setMulti(cnt*2);
+  },[cnt])
+
+  
+  return(
+    <>
+    <button onClick={()=>{setCnt(cnt+1)}}>click here..!!</button>
+    <h1>Application form : {cnt}</h1>
+    <h2>Multiplication : {multi}</h2>
+    </>
+  )
+}
+export default App;
+-----------------------------------------------------------------------------
+import { useState,useEffect } from "react";
+import axios from "axios";
+
+const App=()=>{
+  const[mydata, setMydata]=useState([]);
+  const loadData=()=>{
+    let url="https://jsonplaceholder.typicode.com/todos/1";
+  axios.get(url).then((res)=>{
+    setMydata(res.data)
+    console.log(res.data);
+  });
+ }
+  
+  useEffect(()=>{
+    loadData();
+  },[])
+  let status="";
+const ans=mydata.map((key)=>{
+  if(key.completed== true)
+  {
+    status="TRUE"
+  }
+  else
+  {
+    status="False"
+}
+return(
+  <>
+  <tr>
+    <td>{key.userId}</td>
+    <td>{key.id}</td>
+    <td>{key.title}</td>
+    <td>{status}</td>
+  </tr>
+  </>
+)
+})
+return(
+  <>
+  <h1>welcome to cybrom bhopal....</h1>
+
+  <table>
+    <tr>
+      <th>User Id</th>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Completed</th>
+    </tr>
+    {ans}
+  </table>
+  </>
+)
+}
+export default App;
+--------------------------------------------------------------------
+import { useState,useEffect } from "react";
+import axios from "axios";
+
+const App=()=>{
+  const [mydata,setMydata]=useState([]);
+  const loadData=()=>{
+    let api="http://localhost:3000/students";
+    axios.get(api).then((res)=>{
+      console.log(res.data);
+      setMydata(res.data);
+    });
+  }
+  const ans=mydata.map((key)=>{
+    return(
+      <>
+      <tr>
+        <td>{key.rollno}</td>
+        <td>{key.name}</td>
+        <td>{key.city}</td>
+        <td>{key.fees}</td>
+          </tr>
+          
+          
+          
+      </>
+    )
+  })
+  return(
+    <>
+    <h2>Welcome to my app...</h2>
+    <thead>
+      <tr>
+        <th>RollNo</th>
+        <th>Name</th>
+        <th>City</th>
+        <th>Fees</th>
+      </tr>
+    </thead>
+    <tbody>
+      {ans}
+    </tbody>
+    </>
+
+  )
+}
+export default App;
+--------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
